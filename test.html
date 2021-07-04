@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body style="background-color: gray;">
+<script type="module">
+	import {
+		 call
+		,curry
+		,flatArray
+		,unique
+	} from './index.js'
+
+	// 测试call
+	call({id: 100}, function(){
+		console.log(this);
+	});
+
+	// 测试curry
+	{
+		let foo = (a, b) => a + b;
+		foo = curry(foo);
+		console.log(foo(1)(2));
+	}
+
+	// 测试flatArray
+	{
+		let arr = [1,2,[3,4,[5,6]]];
+		console.log(flatArray(arr, window.Infinity));
+	}
+
+	// 测试unique
+	{
+		let arr = [1,2,3,3,1,2,4];
+		console.log(unique(arr));
+	}
+
+</script>
+</body>
+</html>
