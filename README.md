@@ -8,10 +8,10 @@
 - `bind.js`：bind方法
 - `call.js`：call和apply方法
 - `compose.js`：函数式编程中的组合函数
-- `create.hs`：Object.create方法
+- `create.js`：Object.create方法
 - `curry.js`：柯里化函数
 - `debounce.js`：防抖
-- `deepCopy`：深拷贝
+- `deepCopy.js`：深拷贝
 - `flat.js`：数组扁平化
 - `inherit.js`：原型继承
 - `instanceof.js`：instanceof的函数实现
