@@ -18,4 +18,5 @@
 - `new.js`：new的函数实现
 - `run.js`：自执行生成器
 - `throttle.js`：节流
+- `transform.js`：3个重要的高阶函数，map、reduce和filter
 - `unique.js`：数组去重
