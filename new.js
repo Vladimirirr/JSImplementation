@@ -1,4 +1,4 @@
-function mynew(constructor){
+function mynew(constructor) {
 	/*
 	1. 新建对象
 	2. 将新对象设置成constructor的this
@@ -9,11 +9,11 @@ function mynew(constructor){
 	var newObj = {};
 	newObj.__proto__ = constructor.prototype;
 	var res = constructor.apply(newObj, [].slice.call(arguments));
-	if (typeof res == 'object'){
+	if (typeof res == 'object') {
 		return res;
-	}else{
+	} else {
 		return newObj;
 	}
 }
 
-export {mynew}
+export { mynew }

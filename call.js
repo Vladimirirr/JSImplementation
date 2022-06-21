@@ -1,26 +1,26 @@
-function call(ctx, fn, ...ags){
+function call(ctx, fn, ...ags) {
 	ctx = Object(ctx);
 	// var $prop=Symbol(); // 可以使用符号当作属性
 	ctx['$prop'] = fn;
 	let res;
 	let code;
-	if (ags.length == 0){
-		code=`ctx['$prop']()`;
-	}else{
+	if (ags.length == 0) {
+		code = `ctx['$prop']()`;
+	} else {
 		let neededAgs = [];
-		for (let i=0; i<ags.length; i++){
+		for (let i = 0; i < ags.length; i++) {
 			neededAgs.push(`ags[${i}]`);
 		}
-		code=`ctx['$prop'](${neededAgs.join(',')})`;
+		code = `ctx['$prop'](${neededAgs.join(',')})`;
 	}
 	res = eval(code);
 	delete ctx['$prop'];
 	return res;
 };
 
-function apply(ctx, fn, ags){
+function apply(ctx, fn, ags) {
 	ctx = Object(ctx);
-	if (!Array.isArray(ags)){
+	if (!Array.isArray(ags)) {
 		ags = [];
 	}
 	// var $prop = Symbol();
@@ -45,4 +45,4 @@ function apply(ctx, fn, ags){
 	return res;
 };
 
-export {call, apply}
+export { call, apply }
